@@ -5,7 +5,8 @@ See ionicons in use in your vscode gutter
 ## Features
 
 
-![Example\](resources/example.png)
+![Example](resources/example.png)
+
 
 ## Requirements
 
