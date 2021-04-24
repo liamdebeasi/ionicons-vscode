@@ -2,7 +2,7 @@
 	"name": "ionicons",
 	"displayName": "ionicons",
 	"description": "Display ionic icons in the gutter of vscode",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"icon": "resources/icon.png",
 	"repository": "https://github.com/springtreesolutions/eva-config-picker-vscode.git",
 	"author": {
