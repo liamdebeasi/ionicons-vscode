@@ -1,0 +1,77 @@
+{
+	"name": "ionicons",
+	"displayName": "ionicons",
+	"description": "Display ionic icons in the gutter of vscode",
+	"version": "0.0.1",
+	"author": {
+		"email": "abdelelmedny@gmail.com",
+		"name": "Abdel El-medny",
+		"url": "https://abdelelmedny.firebaseapp.com/"
+	},
+	"publisher": "Abdel El-medny",
+	"engines": {
+		"vscode": "^1.39.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:html"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.downloadIcons",
+				"title": "Download Icons"
+			}
+		],
+		"configuration": {
+			"properties": {
+				"ionicons.logLevel": {
+					"type": "string",
+					"enum": [
+						"info",
+						"debug",
+						"off"
+					],
+					"default": "info",
+					"description": "Logging of the ionicons extension. The log is emitted to the output channel named as ionicons."
+				},
+				"ionicons.darkModeIconColor": {
+					"type": "string",
+					"default": "white",
+					"description": "What icon color to use in dark mode"
+				},
+				"ionicons.iconsVersion": {
+					"type": "string",
+					"default": "5.4.0",
+					"description": "Which version if ionicons to use"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.39.0",
+		"@types/xmldom": "^0.1.30",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"tslint": "^5.20.0",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	},
+	"dependencies": {
+		"axios": "^0.21.1",
+		"xmldom": "^0.6.0"
+	}
+}
