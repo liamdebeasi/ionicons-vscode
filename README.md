@@ -4,7 +4,7 @@ See ionicons in use in your vscode gutter
 
 ## Features
 
-example![image](https://user-images.githubusercontent.com/10495548/115973706-721a5c00-a557-11eb-8cd4-31c69f126c40.png)
+![image](https://user-images.githubusercontent.com/10495548/115973706-721a5c00-a557-11eb-8cd4-31c69f126c40.png)
 
 
 ## Requirements
