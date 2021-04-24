@@ -1,0 +1,20 @@
+name: Vscode publish 
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Read nvmrc
+        run: nvmrc=$(cat .nvmrc)
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npx vsce package
+      - run: npx vsce publish -p "${{ secrets.AZURE_PERSONAL_TOKEN }}"

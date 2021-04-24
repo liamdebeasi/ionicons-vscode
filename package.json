@@ -3,12 +3,14 @@
 	"displayName": "ionicons",
 	"description": "Display ionic icons in the gutter of vscode",
 	"version": "0.0.1",
+	"icon": "resources/icon.png",
+	"repository": "https://github.com/springtreesolutions/eva-config-picker-vscode.git",
 	"author": {
 		"email": "abdelelmedny@gmail.com",
 		"name": "Abdel El-medny",
 		"url": "https://abdelelmedny.firebaseapp.com/"
 	},
-	"publisher": "Abdel El-medny",
+	"publisher": "realappie",
 	"engines": {
 		"vscode": "^1.39.0"
 	},
