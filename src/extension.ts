@@ -14,11 +14,14 @@ export function activate(context: vscode.ExtensionContext) {
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "ionicons" is now active!');
 
+	// const statusBarItem: vscode.StatusBarItem = vscode.window.createStatusBarItem(
+	// 	vscode.StatusBarAlignment.Left,
+	// 	100,
+	// );
 
-	const statusBarItem: vscode.StatusBarItem = vscode.window.createStatusBarItem(
-		vscode.StatusBarAlignment.Left,
-		100,
-	);
+	// statusBarItem.text = 'Toggle icon';
+	// statusBarItem.command = 'extension.downloadIcons';
+	// statusBarItem.show();
 
 	statusBarItem.text = 'Toggle icon';
 	statusBarItem.command = 'extension.downloadIcons';
