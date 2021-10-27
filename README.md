@@ -1,15 +1,16 @@
 # ionicons 
 
-See ionicons in use in your vscode gutter
+Get ionicicons autocomplete & see ionicons in use in your vscode gutter
 
 ## Features
 
-![image](https://user-images.githubusercontent.com/10495548/115973706-721a5c00-a557-11eb-8cd4-31c69f126c40.png)
+![image-gif](https://raw.githubusercontent.com/realappie/ionicons-vscode/master/resources/autocomplete.gif)
 
+![image](https://user-images.githubusercontent.com/10495548/115973706-721a5c00-a557-11eb-8cd4-31c69f126c40.png)
 
 ## Requirements
 
-This currently only works for ionic icons used like this
+This currently only works for ionic icons in angular, react & vue are not supported yet.
 
 ```html
 <ion-icon name="close"><ion-icon>
