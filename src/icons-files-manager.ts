@@ -42,6 +42,18 @@ export const fileExists = (filePath: string)  => {
     return fs.existsSync(filePath);
 }
 
+export const readFile = (filePath: string): Promise<Buffer> => {
+    return new Promise((resolve, reject) => {
+        fs.readFile(filePath, (error, data) => {
+            if (error) {
+                reject(error);
+            } else {
+                resolve(data);
+            }
+        })
+    });
+}
+
 /** Will create a folder if it doesnt already exist */
 export const makeDirRecusive = (folder: string)  => {
     const parent = path.dirname(folder);

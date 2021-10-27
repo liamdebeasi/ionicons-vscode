@@ -9,27 +9,29 @@ interface LoadedIcon {
 }
 
 /** will fetch the outline icon of any ionicon and return the svg text */
-export const iconLoader = (iconName: string = 'add-circle'): Promise<LoadedIcon> => {
+export const iconLoader = (iconName: string = 'add-circle', readable = true): Promise<LoadedIcon> => {
 
-    let outlineIconName: string;
+    let iconToFetchName: string = iconName;
 
     const iconsVersion = vscode.workspace.getConfiguration('ionicons').get<string>('iconsVersion') ?? '5.4.0';
 
-    // For logos there is no outline variant
-    //
-    if ( iconName.startsWith('logo-') ) {
-        outlineIconName = iconName
-    } else if ( iconName.includes('outline')) {
-        outlineIconName = iconName;
-    } else if ( iconName.includes('sharp')) {
-        Logger.appendLine(`iconName=${iconName} is not an outline one but a sharp one, fetching the outline one for maximum readability`, 'iconLoader', false);
-        outlineIconName = iconName.replace('sharp', 'outline');
-    } else {
-        Logger.appendLine(`iconName=${iconName} is not an outline one, fetching the outline one for maximum readability`, 'iconLoader', false);
-        outlineIconName = iconName + '-outline';
+    if (readable) {
+        // For logos there is no outline variant
+        //
+        if ( iconName.startsWith('logo-') ) {
+            iconToFetchName = iconName
+        } else if ( iconName.includes('outline')) {
+            iconToFetchName = iconName;
+        } else if ( iconName.includes('sharp')) {
+            Logger.appendLine(`iconName=${iconName} is not an outline one but a sharp one, fetching the outline one for maximum readability`, 'iconLoader', false);
+            iconToFetchName = iconName.replace('sharp', 'outline');
+        } else {
+            Logger.appendLine(`iconName=${iconName} is not an outline one, fetching the outline one for maximum readability`, 'iconLoader', false);
+            iconToFetchName = iconName + '-outline';
+        }
     }
 
-    const url = `https://unpkg.com/ionicons@${iconsVersion}/dist/svg/${outlineIconName}.svg`;
+    const url = `https://unpkg.com/ionicons@${iconsVersion}/dist/svg/${iconToFetchName}.svg`;
 
     console.log(url);
 
