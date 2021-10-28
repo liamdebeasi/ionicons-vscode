@@ -2,7 +2,7 @@
 	"name": "ionicons",
 	"displayName": "ionicons",
 	"description": "Display ionic icons in the gutter of vscode",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"icon": "resources/icon.png",
 	"repository": "https://github.com/realappie/ionicons-vscode",
 	"author": {
@@ -18,7 +18,10 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onLanguage:html"
+		"onLanguage:html",
+		"onLanguage:vue",
+		"onLanguage:javascriptreact",
+		"onLanguage:typescriptreact"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
