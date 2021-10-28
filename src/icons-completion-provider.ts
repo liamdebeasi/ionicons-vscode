@@ -108,7 +108,7 @@ export class IonIconsCompletionProvider implements CompletionItemProvider {
                 try {
                     const svgIconText = await iconLoader(item.label, false);
 
-                    saveFileInDir(svgIconText.lightMode, iconPath);
+                    saveFileInDir(svgIconText.darkMode, iconPath);
                 } catch (error) {
                     console.error('[ionicons:resolveCompletionItem] resolveCompletionItem', error);
                     Logger.appendLine(`Failed to load ionicon svg with name=${iconName} reason=${error}`, 'resolveCompletionItem', false);
